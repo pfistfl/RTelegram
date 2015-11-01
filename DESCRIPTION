@@ -1,8 +1,8 @@
 Package: RTelegram
-Title: What the Package Does (one line, title case)
+Title: use the telegram bot api to send stuff from R to your smartphone
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.2.2), httr, jsonlite
-License: What license is it under?
+Authors@R: person("Janek", "Thomas", email = "janek.tho@gmail.com", role = c("aut", "cre"))
+Description: Use the telegram bot api to send stuff from R to your smartphone.
+Depends: R (>= 3.2.2), httr
+License: GPL-2
 LazyData: true
