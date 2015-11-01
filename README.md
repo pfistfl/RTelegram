@@ -19,7 +19,7 @@ directly from R to your smartphone.
 You can install the package directly from github with the `devtools` package:
 
     library(devtools)
-    install.github("https://github.com/ja-thomas/RTelegram")
+    install_github("ja-thomas/RTelegram")
 
 Or you can just clone this repository and load it in R via:
     
