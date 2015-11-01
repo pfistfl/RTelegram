@@ -4,7 +4,7 @@ send_message <- function(message, chat_id, token, collapse = TRUE){
     stop("chat_id must be a chat_id object or a character string")
   }
 
-  if(!(inherits(token, "chat_bot") | is.character(chat_id))){
+  if(!(inherits(token, "chat_bot") | is.character(token))){
     stop("token must be a chat_bot object or a character string")
   }
   
