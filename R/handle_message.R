@@ -33,7 +33,7 @@ handle_message = function(chat) {
     msg = "Turing Bot off ..."
     print(msg)
   } else if (tolower(cid$message) == "stop") {
-    msg = "Bot still running, use bot off to deactivate bot first."
+    msg = "Bot still running, use 'bot off' to deactivate bot first."
   } else {
     print(cid$message)
     msg = "Nothing there to execute ..."
@@ -48,6 +48,6 @@ handle_message = function(chat) {
 execute_rcommand = function(input) {
   stringi::stri_sub(input, length = 5) <- ""
   input <- trimws(input)
-  msg = tryCatch(eval(parse(text = input)),
+  msg = tryCatch(eval(parse(text = input), envir = .GlobalEnv),
     error = function(err) {sprintf("Could not eval '%s'", input)})
 }

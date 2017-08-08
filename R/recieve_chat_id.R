@@ -1,7 +1,7 @@
 recieve_chat_id <- function(token){
 
   chat_id <- list()
-  x <- jsonlite::fromJSON(paste0("https://api.telegram.org/bot", token, "/getUpdates"))
+  x <- jsonlite::fromJSON(paste0("https://api.telegram.org/bot", token, "/getUpdates?offset=-3"))
 
   if(!x$ok){
     warning("no message found")

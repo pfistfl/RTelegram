@@ -6,6 +6,7 @@ activate_chat = function(allowed_users, sleep_time = 5) {
     Sys.sleep(sleep_time)
     chat = check_for_message(chat, allowed_users)
   }
+  return(chat)
 }
 
 # Get updates
@@ -30,20 +31,26 @@ update_chat_id = function(chat) {
 # Listen to bot activation.
 # bot on listens
 listen = function(allowed_users, sleep_time = 120L) {
+  # Init chat
   cid = recieve_chat_id(Sys.getenv("telegram_token"))
   bot_start = cid$created_on
   send_message("Started Listening ...", cid, Sys.getenv("telegram_token"))
+
+  # Make new environment
   active = TRUE
   while (active) {
     cid = recieve_chat_id(Sys.getenv("telegram_token"))
     if (tolower(cid$message) == "bot on") {
-      activate_chat(allowed_users)
+      chat = activate_chat(allowed_users)
     } else if (tolower(cid$message) == "stop" & cid$created_on > bot_start) {
+      # Only turn off listening if chat is inactive
+      msg = "Stopped Listening ..."
       active = FALSE
-      send_message("Stopped Listening ...", cid, Sys.getenv("telegram_token"))
+      send_message(msg, cid, Sys.getenv("telegram_token"))
     }
     Sys.sleep(sleep_time)
   }
+  print(msg)
 }
 
 
