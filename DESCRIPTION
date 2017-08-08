@@ -3,6 +3,6 @@ Title: use the telegram bot api to send stuff from R to your smartphone
 Version: 0.0.0.9000
 Authors@R: person("Janek", "Thomas", email = "janek.tho@gmail.com", role = c("aut", "cre"))
 Description: Use the telegram bot api to send stuff from R to your smartphone.
-Depends: R (>= 3.1.0), httr
+Depends: R (>= 3.1.0), httr, jsonlite, stringi
 License: GPL-2
 LazyData: true
