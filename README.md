@@ -1,5 +1,8 @@
 # RTelegram
 
+**Ugly Hack on Top of the Project by Janeck Thomas.
+This allows for setting up a dirty chatbot that can execute R commands.**
+
 **The project is still in an early phase, but some basic functionality is already working**.
 
 This is essentially a wrapper for the [telegram bot API](https://core.telegram.org/bots/api).
