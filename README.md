@@ -1,8 +1,12 @@
 # RTelegram
 
-**Ugly Hack on Top of the Project by Janeck Thomas.
-This allows for setting up a dirty chatbot that can execute R commands.**
+**Ugly Hack on Top of the Project by Janek Thomas.**
+**This allows for setting up a dirty chatbot that can execute R commands.**
 
+** Start by calling listen(Telegram_User_Name)**
+- Bot on
+- Bot off
+- Rexec rcommand
 **The project is still in an early phase, but some basic functionality is already working**.
 
 This is essentially a wrapper for the [telegram bot API](https://core.telegram.org/bots/api).
